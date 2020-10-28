@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2020.10.28 15:20-15:50 -->
+    <div class="squre">
+        <div class="box">
+            <div class="mod">1</div>
+            <div class="mod">2</div>
+            <div class="mod">3</div>
+            <div class="mod">4</div>
+            <div class="mod">5</div>
+            <div class="mod">6</div>
+            <div class="mod">7</div>
+            <div class="mod">8</div>
+            <div class="mod">9</div>
+        </div>
+    </div>
+</body>
+<style>
+    .squre {
+        width: 100%;
+        /* padding百分比是相对父元素宽度计算的 */
+        padding-bottom: 100%;
+        position: relative;
+    }
+
+    .box {
+        display: flex;
+        /* 让弹性盒元素在必要的时候拆行： */
+        flex-wrap: wrap;
+        /* 设置或检索弹性盒子的扩展比率。 */
+        width: 100%;
+        /* 铺满父元素容器，这时候宽高就始终相等了 */
+        height: 100%;
+        float: left;
+        position: absolute;
+    }
+
+    .mod {
+        /* calc() 函数用于动态计算长度值。 */
+        width: calc(98% / 3);
+        height: calc(98% / 3);
+        border-radius: 10px;
+        background-color: pink;
+        margin-right: 1%;
+        margin-bottom: 1%;
+        text-align: center;
+        font-size:;
+
+    }
+
+    .box>div:nth-of-type(3n) {
+        /* 选择个数是3的倍数的元素 */
+        margin-right: 0;
+    }
+</style>
+
+</html>
